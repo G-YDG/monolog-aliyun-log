@@ -1,0 +1,40 @@
+{
+    "name": "ydg/monolog-aliyun-log",
+    "description": "Let monolog support aliyun log.",
+    "license": "MIT",
+    "keywords": [
+      "php",
+      "log",
+      "aliyun"
+    ],
+    "require": {
+      "php": ">=7.2",
+      "monolog/monolog": "^1.24 || ^2.0",
+      "alibabacloud/aliyun-log-php-sdk": "^0.6.3"
+    },
+    "require-dev": {
+      "friendsofphp/php-cs-fixer": "^3.12",
+      "phpunit/phpunit": "^9.5",
+      "vlucas/phpdotenv": "^5.0"
+    },
+    "autoload": {
+      "psr-4": {
+        "Ydg\\MonologAliyunLog\\": "src/"
+      }
+    },
+    "autoload-dev": {
+      "psr-4": {
+        "YdgTest\\MonologAliyunLog\\": "tests/"
+      },
+      "files": [
+        "tests/functions.php"
+      ]
+    },
+    "config": {
+      "sort-packages": true
+    },
+    "scripts": {
+      "test": "phpunit",
+      "cs-fix": "php-cs-fixer fix $1"
+    }
+}

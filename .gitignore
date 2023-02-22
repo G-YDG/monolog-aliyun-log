@@ -1,0 +1,14 @@
+.buildpath
+.settings/
+.project
+*.patch
+.idea/
+.git/
+runtime/
+vendor/
+.env
+.DS_Store
+*.lock
+*.cache
+.bashrc
+*.zip
