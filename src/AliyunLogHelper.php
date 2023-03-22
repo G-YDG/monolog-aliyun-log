@@ -23,8 +23,8 @@ class AliyunLogHelper
     {
         if (!$this->logger instanceof Logger) {
             $this->logger = new Logger($config['name']);
+            $this->logger->pushHandler(AliyunLogHelper::getLogHandler(AliyunLogHelper::getLogClient($config), $config));
         }
-        $this->logger->pushHandler(AliyunLogHelper::getLogHandler(AliyunLogHelper::getLogClient($config), $config));
 
         return $this->logger;
     }
